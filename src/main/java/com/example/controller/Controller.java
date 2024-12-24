@@ -9,7 +9,6 @@ public class Controller {
 	@GetMapping("/msg")
 	public String getSampleMessage() {
 		return "Hello World!";
-		
 	}
 
 }
