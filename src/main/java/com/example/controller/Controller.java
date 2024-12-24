@@ -10,5 +10,10 @@ public class Controller {
 	public String getSampleMessage() {
 		return "Hello World!";
 	}
+	
+	@GetMapping("/test")
+	public String getTestMessage() {
+		return "This is the JAVA and Spring boot integartion...";
+	}
 
 }
