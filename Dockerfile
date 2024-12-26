@@ -9,6 +9,8 @@ EXPOSE 8081
 
 WORKDIR /target
 
+CMD mvc clean install
+
 # Copy the Spring Boot application JAR file to the container
 COPY target/spring_jenkins.jar spring_jenkins.jar
 
