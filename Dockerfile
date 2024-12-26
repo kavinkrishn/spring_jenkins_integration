@@ -7,6 +7,8 @@ WORKDIR /app
 # Expose port 8081
 EXPOSE 8081
 
+WORKDIR /target
+
 # Copy the Spring Boot application JAR file to the container
 ADD target/spring_jenkins.jar spring_jenkins.jar
 
