@@ -48,7 +48,7 @@
 	</dependencies>
 
 	<build>
-		<finalName>sampleTomcat</finalName>
+		<finalName>spring_jenkins</finalName>
 		<plugins>
 			
 			<plugin>
