@@ -1,16 +1,13 @@
-# Use the OpenJDK 17 image as the base
-FROM openjdk:17-jdk-slim
-
-# Set the working directory
+# Stage 1: Build the application
+FROM maven:3.8.8-openjdk-17 AS builder
 WORKDIR /app
+COPY . .
+RUN mvn clean package -DskipTests
 
-# Expose port 8081
+# Stage 2: Run the application
+FROM openjdk:17-jdk-slim
+WORKDIR /app
+COPY --from=builder /app/target/spring_jenkins.jar spring_jenkins.jar
 EXPOSE 8081
-
-WORKDIR /target
-
-# Copy the Spring Boot application JAR file to the container
-ADD target/spring_jenkins.jar spring_jenkins.jar
-
-# Run the application
 ENTRYPOINT ["java", "-jar", "/app/spring_jenkins.jar"]
+
