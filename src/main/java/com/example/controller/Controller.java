@@ -16,5 +16,10 @@ public class Controller {
 	public String getTestMessage() {
 		return "This is the JAVA and Spring boot integartion...";
 	}
+	
+	@GetMapping("/sample")
+	public String getDemotMessage() {
+		return "Sample Test Page";
+	}
 
 }
