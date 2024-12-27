@@ -10,12 +10,11 @@
 	<groupId>com.example</groupId>
 	<artifactId>spring_jenkins</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>jar</packaging>
+	<packaging>war</packaging>
 	<name>demo</name>
 	<description>Spring Boot with Jenkins Integration</description>
 	<properties>
     <java.version>17</java.version>
-
 </properties>
 	<dependencies>
 		<dependency>
